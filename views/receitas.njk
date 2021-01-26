@@ -1,0 +1,40 @@
+{%extends "layout.njk"%}
+
+{%block content%}
+
+  <title>Receitas</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+  <section class="cards">
+
+    {%for card in cards%}
+      <div class="card" id="{{card.id}}">
+        <div class="card-image">
+          <img src="/assets/{{card.id}}.png" alt="burger"/>
+        </div>
+        <div class="card-content">
+          <div class="title">{{card.title}}</div>
+          <p>por
+            {{card.author}}</p>
+        </div>
+      </div>
+      {%endfor%}
+
+      {%for card in cards%}
+        <div class="card" id="{{card.id}}">
+          <div class="card-image">
+            <img src="./assets/{{card.id}}.png" alt="burger"/>
+          </div>
+          <div class="card-content">
+            <div class="title">{{card.title}}</div>
+            <p>por
+              {{card.author}}</p>
+          </div>
+        </div>
+        {%endfor%}
+      </section>
+
+      <script src="script.js"></script>
+
+      {%endblock%}

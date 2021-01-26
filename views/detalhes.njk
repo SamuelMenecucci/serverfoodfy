@@ -1,0 +1,36 @@
+{%extends "layout.njk"%}
+
+{%block content%}
+
+    <div class="image-container">
+        <img src="./assets/{{cards[0].id}}.png" alt="">
+    </div>
+
+    <div class="title-container">{{cards[0].title}}</div>
+    <div class="author-container">por
+        {{cards[0].author}}</div>
+
+    <div class="ingredients">
+
+        <p>
+            Ingredientes</p>
+
+        {%for ingredient in cards[0].ingredients %}
+            <li>{{ingredient}}</li>
+            {%endfor%}
+        </div>
+
+        <div class="prepare">
+            <p>Modo de preparo</p>
+
+            {%for preparation in cards[0].preparation%}
+                <li>{{preparation}}</li>
+                {%endfor%}
+            </div>
+
+            <div class="informationsplus">
+                <p>Informaçõoes adicionais</p>
+                {{cards[0].information}}
+            </div>
+
+            {%endblock%}
